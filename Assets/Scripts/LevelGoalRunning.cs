@@ -15,6 +15,7 @@ public class LevelGoalRunning : MonoBehaviour
     private NavMeshAgent agent;
     private float nextRepathTime;
     private bool playerInRange;
+    private bool isStunned;
 
     private void Awake()
     {
@@ -23,6 +24,18 @@ public class LevelGoalRunning : MonoBehaviour
 
     private void Update()
     {
+        if (isStunned)
+        {
+            if (!agent.isStopped)
+            {
+                agent.isStopped = true;
+            }
+            if (agent.hasPath)
+                agent.ResetPath();
+
+            return;
+        }
+
         if (!playerInRange || player == null)
         {
             if (agent.hasPath)
@@ -46,6 +59,9 @@ public class LevelGoalRunning : MonoBehaviour
 
     public void SetPlayerInRange(Transform detectedPlayer)
     {
+        if (isStunned)
+            return;
+
         player = detectedPlayer;
         playerInRange = true;
     }
@@ -55,6 +71,18 @@ public class LevelGoalRunning : MonoBehaviour
         if (player == detectedPlayer)
         {
             playerInRange = false;
+        }
+    }
+
+    public void Stun()
+    {
+        isStunned = true;
+        playerInRange = false;
+
+        if (agent  != null)
+        {
+            agent.isStopped = true;
+            agent.ResetPath();
         }
     }
 
@@ -76,9 +104,9 @@ public class LevelGoalRunning : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerMovement pm = other.GetComponent<PlayerMovement>() ?? other.GetComponentInParent<PlayerMovement>();
+        LevelGoalGrab grabCollector = other.GetComponent<LevelGoalGrab>();
 
-        if (pm != null)
+        if (grabCollector != null)
         {
             if (LevelGoalManager.Instance != null)
             {

@@ -11,5 +11,13 @@ public class PunchHitbox : MonoBehaviour
         {
             wall.BreakWall();
         }
+
+        LevelGoalRunning goalAI = other.GetComponent<LevelGoalRunning>()
+                                  ?? other.GetComponentInParent<LevelGoalRunning>();
+
+        if (goalAI != null)
+        {
+            goalAI.Stun();
+        }
     }
 }

@@ -12,7 +12,9 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerMovement>() != null || other.GetComponentInParent<PlayerMovement>() != null)
+        PlayerBody body = other.GetComponent<PlayerBody>();
+
+        if (body != null)
         {
             if (CoinManager.Instance != null)
             {

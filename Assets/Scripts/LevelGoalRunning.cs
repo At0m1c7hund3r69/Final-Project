@@ -104,9 +104,9 @@ public class LevelGoalRunning : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerBody body = other.GetComponent<PlayerBody>();
+        LevelGoalGrab grabCollector = other.GetComponent<LevelGoalGrab>();
 
-        if (body != null)
+        if (grabCollector != null)
         {
             if (LevelGoalManager.Instance != null)
             {

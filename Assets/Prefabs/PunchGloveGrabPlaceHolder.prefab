@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5125837355010809793}
   - component: {fileID: 7205411841625271683}
   - component: {fileID: 3641280791180843729}
+  - component: {fileID: 7240615171504370256}
   m_Layer: 0
   m_Name: PunchGloveGrabPlaceHolder
   m_TagString: Untagged
@@ -153,3 +154,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2be62ffed1eb684bbd99afc74453e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabHitbox
+--- !u!114 &7240615171504370256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4654213945763486995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a35be504bd62344ae31f00a7180ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelGoalGrab

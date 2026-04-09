@@ -7,17 +7,14 @@ public class LevelTransition : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger entered by: " + other.name);
 
         PlayerBody body = other.GetComponentInParent<PlayerBody>();
 
         if (body == null)
         {
-            Debug.Log("Entered object is not the player.");
             return;
         }
 
-        Debug.Log("Loading scene: " + sceneToLoad);
         SceneManager.LoadScene(sceneToLoad);
     }
 }

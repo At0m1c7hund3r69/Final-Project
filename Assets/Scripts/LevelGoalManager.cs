@@ -10,7 +10,9 @@ public class LevelGoalManager : MonoBehaviour
 
     [Header("Optional UI")]
     [SerializeField] private TMP_Text objectiveText;
-    [SerializeField] private GameObject levelCompleteUI;
+
+    [Header("Menu Reference")]
+    [SerializeField] private PauseMenuManager pauseMenuManager;
 
     public int CurrentCount { get; private set; }
     public bool LevelComplete { get; private set; }
@@ -24,10 +26,6 @@ public class LevelGoalManager : MonoBehaviour
         }
 
         Instance = this;
-
-        if (levelCompleteUI != null)
-            levelCompleteUI.SetActive(false);
-
         UpdateObjectiveText();
     }
 
@@ -59,7 +57,9 @@ public class LevelGoalManager : MonoBehaviour
 
         Debug.Log("Level Complete!");
 
-        if (levelCompleteUI != null)
-            levelCompleteUI.SetActive(true);
+        if (pauseMenuManager != null)
+        {
+            pauseMenuManager.ShowWinMenu();
+        }
     }
 }

@@ -6371,7 +6371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5447841840398510315, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
       propertyPath: sceneToLoad
-      value: David's Scene
+      value: HubWorld
       objectReference: {fileID: 0}
     - target: {fileID: 8397661761413990324, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
       propertyPath: m_Name

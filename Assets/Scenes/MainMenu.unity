@@ -463,6 +463,10 @@ PrefabInstance:
       propertyPath: howToPlayPanel
       value: 
       objectReference: {fileID: 1504376019}
+    - target: {fileID: 4409519174535368832, guid: c13cc07eedf89384ca82c4e79c2541dd, type: 3}
+      propertyPath: gameplaySceneName
+      value: HubWorld
+      objectReference: {fileID: 0}
     - target: {fileID: 7213305224912978324, guid: c13cc07eedf89384ca82c4e79c2541dd, type: 3}
       propertyPath: m_Name
       value: MainMenuManager

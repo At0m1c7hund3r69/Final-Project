@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/David's_Folder/David's Scene.unity
     guid: 1bdd39005273e9d47ae1a4a99f2fcc1b
   - enabled: 1
-    path: Assets/Taylor_Prototype/PrototypeScene.unity
+    path: Assets/Taylor_Assets/Scenes/PrototypeScene.unity
     guid: 812d744f35b048545857e5a72c6c9d65
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity

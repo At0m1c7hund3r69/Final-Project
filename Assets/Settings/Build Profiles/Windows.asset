@@ -21,8 +21,17 @@ MonoBehaviour:
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
-    m_path: Assets/Taylor_Prototype/PrototypeScene.unity
+    m_path: Assets/Scenes/MainMenu.unity
+    m_guid: bbc9e8d1a2f1d9d448da03cc962317f0
+  - m_enabled: 1
+    m_path: Assets/Taylor_Assets/Scenes/PrototypeScene.unity
     m_guid: 812d744f35b048545857e5a72c6c9d65
+  - m_enabled: 1
+    m_path: Assets/Taylor_Assets/Scenes/HubWorld.unity
+    m_guid: cdbd9b11190425b42b5acfda60b0695e
+  - m_enabled: 1
+    m_path: Assets/Taylor_Assets/Scenes/DinosaurJungle.unity
+    m_guid: ccbec21897cec714c9a870ec50cb60ba
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:

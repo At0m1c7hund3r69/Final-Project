@@ -64,59 +64,6 @@ Transform:
   - {fileID: 2140050957288696623}
   m_Father: {fileID: 8383721413334407959}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &435109546962350381
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7188931795155809102}
-  - component: {fileID: 4938826241540335337}
-  m_Layer: 0
-  m_Name: ButtonInteraction
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7188931795155809102
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435109546962350381}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.13843821, y: 0.69342446, z: -0.13844462, w: -0.6934195}
-  m_LocalPosition: {x: -0.072399385, y: 0.017264359, z: -0.18010603}
-  m_LocalScale: {x: 0.75212103, y: 0.75212085, z: 0.7521208}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1035088600127699185}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4938826241540335337
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435109546962350381}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1378815127572467621
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2274905424856678523}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.8208101, y: -0.51083994, z: 0.13199997}
   m_LocalScale: {x: 12.53943, y: 12.53943, z: 12.53943}
   m_ConstrainProportionsScale: 0
@@ -3373,10 +3320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5647740389651762351, guid: 0a7de73bd1f48994298b714c6042a291, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7188931795155809102}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a7de73bd1f48994298b714c6042a291, type: 3}
 --- !u!4 &1035088600127699185 stripped

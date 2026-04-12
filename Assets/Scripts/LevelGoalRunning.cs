@@ -1,9 +1,14 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class LevelGoalRunning : MonoBehaviour
 {
+    private static HashSet<string> collectedGoals = new HashSet<string>();
+
+    public string uniqueGoalID;
+
     [Header("References")]
     [SerializeField] private Transform player;
 
@@ -20,6 +25,14 @@ public class LevelGoalRunning : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+    }
+
+    private void Start()
+    {
+        if (!string.IsNullOrEmpty(uniqueGoalID) && collectedGoals.Contains(uniqueGoalID))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
@@ -108,6 +121,11 @@ public class LevelGoalRunning : MonoBehaviour
 
         if (grabCollector != null)
         {
+            if (!string.IsNullOrEmpty(uniqueGoalID))
+            {
+                collectedGoals.Add(uniqueGoalID);
+            }
+
             if (LevelGoalManager.Instance != null)
             {
                 LevelGoalManager.Instance.CollectObjective(1);

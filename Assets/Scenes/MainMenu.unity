@@ -127,6 +127,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1989390844302063975, guid: b6beaa8a53153f040a2c64755812109f, type: 3}
+      propertyPath: m_text
+      value: Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338592568771300809, guid: b6beaa8a53153f040a2c64755812109f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 183.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2720538935545119691, guid: b6beaa8a53153f040a2c64755812109f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -134,6 +142,14 @@ PrefabInstance:
     - target: {fileID: 2720538935545119691, guid: b6beaa8a53153f040a2c64755812109f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012132707057904457, guid: b6beaa8a53153f040a2c64755812109f, type: 3}
+      propertyPath: m_text
+      value: Ape On Overtime
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012132707057904457, guid: b6beaa8a53153f040a2c64755812109f, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3071472654898949799, guid: b6beaa8a53153f040a2c64755812109f, type: 3}
       propertyPath: m_Pivot.x
@@ -215,9 +231,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4194608380452912307, guid: b6beaa8a53153f040a2c64755812109f, type: 3}
+      propertyPath: m_text
+      value: How To Play
+      objectReference: {fileID: 0}
     - target: {fileID: 5903427221538277507, guid: b6beaa8a53153f040a2c64755812109f, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026280163016862680, guid: b6beaa8a53153f040a2c64755812109f, type: 3}
+      propertyPath: m_text
+      value: Quit
       objectReference: {fileID: 0}
     - target: {fileID: 7161637475130101378, guid: b6beaa8a53153f040a2c64755812109f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

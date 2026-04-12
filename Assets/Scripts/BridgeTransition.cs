@@ -1,7 +1,12 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class BridgeTransition : MonoBehaviour
 {
+    private static HashSet<string> loweredBridgeIDs = new HashSet<string>();
+
+    public string uniqueBridgeID;
+
     [SerializeField] private Vector3 raisedEulerAngles;
     [SerializeField] private Vector3 loweredEulerAngles = new Vector3(0f, 0f, -90f);
     [SerializeField] private float rotateSpeed = 90f;
@@ -16,7 +21,17 @@ public class BridgeTransition : MonoBehaviour
         raisedRotation = Quaternion.Euler(raisedEulerAngles);
         loweredRotation = Quaternion.Euler(loweredEulerAngles);
 
-        transform.rotation = raisedRotation;
+        if (!string.IsNullOrEmpty(uniqueBridgeID) && loweredBridgeIDs.Contains(uniqueBridgeID))
+        {
+            transform.rotation = loweredRotation;
+            isLowered = true;
+            shouldLower = false;
+        }
+
+        else
+        {
+            transform.rotation = raisedRotation;
+        }
     }
 
     private void Update()
@@ -44,5 +59,10 @@ public class BridgeTransition : MonoBehaviour
             return;
 
         shouldLower = true;
+
+        if (!string.IsNullOrEmpty(uniqueBridgeID))
+        {
+            loweredBridgeIDs.Add(uniqueBridgeID);
+        }
     }
 }

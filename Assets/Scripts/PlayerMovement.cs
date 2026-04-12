@@ -56,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 lookInput = lookAction.ReadValue<Vector2>();
 
-        //Mouse Looking
         float yawDelta = lookInput.x * lookSensitivity;
         float pitchDelta = lookInput.y * lookSensitivity;
 

@@ -413,6 +413,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5484001526792350773, guid: c7127fb3932f00145a2985ae8ffd39e8, type: 3}
   m_PrefabInstance: {fileID: 3968434257185154851}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &74362139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4151348797724504178, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.93948
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151348797724504178, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151348797724504178, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.709
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151348797724504178, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151348797724504178, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151348797724504178, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151348797724504178, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151348797724504178, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151348797724504178, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151348797724504178, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447841840398510315, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: sceneToLoad
+      value: DinosaurJungle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397661761413990324, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: m_Name
+      value: LevelTransition
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
 --- !u!1 &77974860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c381805a4de4774baa81f38cfe15b72, type: 3}
@@ -729,6 +790,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2108517037}
     m_Modifications:
+    - target: {fileID: 7203995597520896736, guid: 05a4b2d37ad868e4b880e6059e94f958, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b9a525549510aeb4faa6af6c6947c8cf, type: 2}
     - target: {fileID: -8679921383154817045, guid: e28b513826fd0744391bfc665906b271, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -790,10 +855,6 @@ PrefabInstance:
       value: MonkeyRigBetter
       objectReference: {fileID: 0}
     - target: {fileID: 4068588493474411711, guid: e28b513826fd0744391bfc665906b271, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: b9a525549510aeb4faa6af6c6947c8cf, type: 2}
-    - target: {fileID: 7203995597520896736, guid: 05a4b2d37ad868e4b880e6059e94f958, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b9a525549510aeb4faa6af6c6947c8cf, type: 2}
@@ -50731,3 +50792,4 @@ SceneRoots:
   - {fileID: 1355486568}
   - {fileID: 572960990}
   - {fileID: 572401119}
+  - {fileID: 74362139}

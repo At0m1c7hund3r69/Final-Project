@@ -24,7 +24,7 @@ public class PauseMenuManager : MonoBehaviour
     {
         if (gameOver) return;
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyUp(KeyCode.JoystickButton7))
         {
             if (isPaused)
                 ResumeGame();

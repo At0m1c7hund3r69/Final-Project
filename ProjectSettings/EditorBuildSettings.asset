@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: bbc9e8d1a2f1d9d448da03cc962317f0
+  - enabled: 1
+    path: Assets/Taylor_Assets/Scenes/HubWorld.unity
+    guid: cdbd9b11190425b42b5acfda60b0695e
+  - enabled: 1
+    path: Assets/Taylor_Assets/Scenes/DinosaurJungle.unity
+    guid: ccbec21897cec714c9a870ec50cb60ba
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

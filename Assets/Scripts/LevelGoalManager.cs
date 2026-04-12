@@ -1,9 +1,18 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class LevelGoalManager : MonoBehaviour
 {
     public static LevelGoalManager Instance { get; private set; }
+
+    private static Dictionary<string, int> levelProgress = new Dictionary<string, int>();
+
+    public static int GrandTotalCollected { get; private set; }
+
+    [Header("Level Identification")]
+    [Tooltip("Type a unique name for this level so the manager remembers its specific score (e.g., 'DinosaurJungle')")]
+    public string levelID = "Level_1";
 
     [Header("Goal Settings")]
     [SerializeField] private int requiredCount = 3;
@@ -14,7 +23,20 @@ public class LevelGoalManager : MonoBehaviour
     [Header("Menu Reference")]
     [SerializeField] private PauseMenuManager pauseMenuManager;
 
-    public int CurrentCount { get; private set; }
+    public int CurrentCount
+    {
+        get
+        {
+            if (levelProgress.ContainsKey(levelID))
+                return levelProgress[levelID];
+            return 0;
+        }
+        private set
+        {
+            levelProgress[levelID] = value;
+        }
+    }
+
     public bool LevelComplete { get; private set; }
 
     private void Awake()
@@ -26,6 +48,12 @@ public class LevelGoalManager : MonoBehaviour
         }
 
         Instance = this;
+
+        if (CurrentCount >= requiredCount)
+        {
+            LevelComplete = true;
+        }
+
         UpdateObjectiveText();
     }
 
@@ -35,6 +63,8 @@ public class LevelGoalManager : MonoBehaviour
             return;
 
         CurrentCount += amount;
+        GrandTotalCollected += amount;
+
         UpdateObjectiveText();
 
         if (CurrentCount >= requiredCount)

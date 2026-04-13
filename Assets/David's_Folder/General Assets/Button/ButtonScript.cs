@@ -10,15 +10,18 @@ public class ButtonScript : MonoBehaviour
 
     public PunchGunV2 myGun;
 
+    private AudioSource buttonNoise;
+
 
     public int puzzleNumber;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
 
         canPress = true;
+
+        buttonNoise = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -47,6 +50,8 @@ public class ButtonScript : MonoBehaviour
                 anim.SetTrigger("Pressed");
                 canPress = false;
                 StartCoroutine(returnButton());
+
+                buttonNoise.Play();
 
                 if (puzzleNumber == 0)
                 {

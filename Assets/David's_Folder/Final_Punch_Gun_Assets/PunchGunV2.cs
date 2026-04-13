@@ -31,6 +31,13 @@ public class PunchGunV2 : MonoBehaviour
     private bool canChangeGlove;
 
 
+    private AudioSource gunSource;
+
+    public AudioClip shootClip;
+
+    public AudioClip retractClip;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,6 +53,7 @@ public class PunchGunV2 : MonoBehaviour
 
         canChangeGlove = true;
 
+        gunSource = GetComponent<AudioSource>();
 
     }
 
@@ -93,6 +101,8 @@ public class PunchGunV2 : MonoBehaviour
 
             anim.SetFloat("Speed", 2f);
 
+            gunSource.PlayOneShot(shootClip);
+
             canPunch = false;
 
             isTimerRunning = true;
@@ -119,6 +129,8 @@ public class PunchGunV2 : MonoBehaviour
         anim.ResetTrigger("Punch");
         isTimerRunning = false;
         anim.SetFloat("Speed", -2f);
+        gunSource.Stop();
+        gunSource.PlayOneShot(retractClip);
         StartCoroutine(restorePunch());
     }
 

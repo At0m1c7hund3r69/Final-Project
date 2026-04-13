@@ -9555,6 +9555,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_Mesh
       objectReference: {fileID: 0}
+    - target: {fileID: 6356046836469896641, guid: a4ed4019980a4db4da1d6214376c1caf, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356046836469896641, guid: a4ed4019980a4db4da1d6214376c1caf, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: f25e931e7c5c80e4597d8e2619b76b63, type: 3}
+    - target: {fileID: 6356046836469896641, guid: a4ed4019980a4db4da1d6214376c1caf, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7182758172425948408, guid: a4ed4019980a4db4da1d6214376c1caf, type: 3}
       propertyPath: myGun
       value: 

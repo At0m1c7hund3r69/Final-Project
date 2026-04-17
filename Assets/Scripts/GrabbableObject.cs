@@ -1,7 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GrabbableObject : MonoBehaviour
 {
+    private static HashSet<string> permanentlyDeliveredItems = new HashSet<string>();
+
+    [Header("Save State")]
+    [Tooltip("Give this a unique name (e.g., 'Level1_BlueGem') so it doesn't respawn")]
+    public string uniqueSaveID;
+
     [SerializeField] private string itemId = "";
     [SerializeField] private bool disableCollidersWhileHeld = true;
 
@@ -15,6 +22,19 @@ public class GrabbableObject : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         allColliders = GetComponentsInChildren<Collider>();
+    }
+
+    private void Start()
+    {
+        if (!string.IsNullOrEmpty(uniqueSaveID) && permanentlyDeliveredItems.Contains(uniqueSaveID))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public static void ResetDeliveredItems()
+    {
+        permanentlyDeliveredItems.Clear();
     }
 
     public bool Grab(Transform holdPoint)
@@ -77,6 +97,11 @@ public class GrabbableObject : MonoBehaviour
 
         if (destroyOnDelivery)
         {
+            if (!string.IsNullOrEmpty(uniqueSaveID))
+            {
+                permanentlyDeliveredItems.Add(uniqueSaveID);
+            }
+
             Destroy(gameObject);
             return;
         }

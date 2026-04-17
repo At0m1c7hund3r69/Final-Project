@@ -23,5 +23,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Taylor_Assets/Scenes/DinosaurJungle.unity
     guid: ccbec21897cec714c9a870ec50cb60ba
+  - enabled: 1
+    path: Assets/Scenes/AncientEgypt.unity
+    guid: 05bfd678f76e38c4aa2849430ac2d60c
+  - enabled: 1
+    path: Assets/Scenes/OuterSpace.unity
+    guid: 0aaa7fc242e0d6047839d90f97a009ea
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

@@ -91,5 +91,14 @@ public class PauseMenuManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenuSceneName);
+        Coin.ResetCollectedBells();
+        CoinManager.ResetScore();
+        GrabbableObject.ResetDeliveredItems();
+        LevelGoalManager.ResetGoals();
+        PunchButton.ResetButtons();
+        BridgeTransition.ResetBridges();
+        LevelGoalRunning.ResetLevelGoals();
+        BreakableWall.ResetBreakableWalls();
+        SequencePuzzleManager.ResetSequencePuzzles();
     }
 }

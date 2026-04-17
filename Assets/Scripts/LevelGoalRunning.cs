@@ -17,6 +17,9 @@ public class LevelGoalRunning : MonoBehaviour
     [SerializeField] private float repathInterval = 0.2f;
     [SerializeField] private float navMeshSampleRadius = 4f;
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip pickupSound;
+
     private NavMeshAgent agent;
     private float nextRepathTime;
     private bool playerInRange;
@@ -33,6 +36,11 @@ public class LevelGoalRunning : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public static void ResetLevelGoals()
+    {
+        collectedGoals.Clear();
     }
 
     private void Update()
@@ -129,6 +137,11 @@ public class LevelGoalRunning : MonoBehaviour
             if (LevelGoalManager.Instance != null)
             {
                 LevelGoalManager.Instance.CollectObjective(1);
+            }
+
+            if (pickupSound != null)
+            {
+                AudioSource.PlayClipAtPoint(pickupSound, transform.position);
             }
 
             Destroy(gameObject);

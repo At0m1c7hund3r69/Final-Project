@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform cameraTransform;
 
     [Header("Movement")]
-    [SerializeField] private float walkSpeed = 4f;
-    [SerializeField] private float jumpHeight = 1.2f;
+    [SerializeField] private float walkSpeed = 7f;
+    [SerializeField] private float jumpHeight = 2f;
     [SerializeField] private float gravity = -20f;
 
     [Header("Look")]

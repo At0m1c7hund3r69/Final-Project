@@ -13,6 +13,12 @@ public class BreakableWall : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public static void ResetBreakableWalls()
+    {
+        brokenWallIDs.Clear();
+    }
+
     public void BreakWall()
     {
         if (!string.IsNullOrEmpty(uniqueWallID))

@@ -1,7 +1,14 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class DropOffZone : MonoBehaviour
 {
+    private static HashSet<string> completedZones = new HashSet<string>();
+
+    [Header("Persistence")]
+    [Tooltip("Type a unique ID to keep the door open across level transitions (e.g., 'Level3_KeyDrop')")]
+    [SerializeField] private string uniqueZoneID = "";
+
     [SerializeField] private string requiredItemId = "";
     [SerializeField] private int requiredQuantity = 1;
 
@@ -13,8 +20,28 @@ public class DropOffZone : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private bool spawnOnlyOnce = true;
 
+    [Header("Door Unlocking (New)")]
+    [Tooltip("Assign the door object you want to disappear when the delivery is complete")]
+    [SerializeField] private GameObject doorToOpen;
+
     private int currentQuantity;
     private bool hasSpawned;
+
+    private void Start()
+    {
+        // When the scene loads, check if this zone was already completed previously
+        if (!string.IsNullOrEmpty(uniqueZoneID) && completedZones.Contains(uniqueZoneID))
+        {
+            currentQuantity = requiredQuantity;
+            UnlockDoor();
+
+            // If it was supposed to spawn a reward item, make sure it still spawns
+            if (spawnOnlyOnce)
+            {
+                TrySpawnObject();
+            }
+        }
+    }
 
     public bool CanAccept(GrabbableObject obj)
     {
@@ -44,7 +71,14 @@ public class DropOffZone : MonoBehaviour
 
         if (currentQuantity >= requiredQuantity)
         {
+            // Save the completion state to the global memory list
+            if (!string.IsNullOrEmpty(uniqueZoneID))
+            {
+                completedZones.Add(uniqueZoneID);
+            }
+
             TrySpawnObject();
+            UnlockDoor();
         }
     }
 
@@ -62,6 +96,16 @@ public class DropOffZone : MonoBehaviour
         hasSpawned = true;
 
         Debug.Log($"{name}: Spawned {objectToSpawn.name}");
+    }
+
+    private void UnlockDoor()
+    {
+        if (doorToOpen != null)
+        {
+            // Instantly deactivate the physical door object to open the path
+            doorToOpen.SetActive(false);
+            Debug.Log($"{name}: Door opened!");
+        }
     }
 
     private void OnTriggerEnter(Collider other)

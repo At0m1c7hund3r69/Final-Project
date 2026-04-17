@@ -34,6 +34,11 @@ public class BridgeTransition : MonoBehaviour
         }
     }
 
+    public static void ResetBridges()
+    {
+        loweredBridgeIDs.Clear();
+    }
+
     private void Update()
     {
         if (!shouldLower)

@@ -437,6 +437,87 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4151348797724504178, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
   m_PrefabInstance: {fileID: 94833630}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &97027408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97027409}
+  - component: {fileID: 97027411}
+  - component: {fileID: 97027410}
+  m_Layer: 11
+  m_Name: PunchGunWallTrigger (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &97027409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97027408}
+  serializedVersion: 2
+  m_LocalRotation: {x: -7.850457e-18, y: 0.70710707, z: -7.8504635e-18, w: 0.70710653}
+  m_LocalPosition: {x: 13.493, y: -2.66, z: 24.447}
+  m_LocalScale: {x: 1, y: 6.4833, z: 14.874285}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1414657635}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!54 &97027410
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97027408}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &97027411
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97027408}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0398483, y: 3.176853, z: 2.5721319}
+  m_Center: {x: 0.24607563, y: -1.0884264, z: -1.2768457}
 --- !u!1 &104367362
 GameObject:
   m_ObjectHideFlags: 0
@@ -8898,10 +8979,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineThirdPersonFollow
   Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0.7, y: 0.1, z: -0.5}
-  VerticalArmLength: 0.5
+  ShoulderOffset: {x: 0.7, y: 0.5, z: 0.3}
+  VerticalArmLength: 0.3
   CameraSide: 1
-  CameraDistance: 2
+  CameraDistance: 4
   AvoidObstacles:
     Enabled: 0
     CollisionFilter:
@@ -8963,7 +9044,7 @@ Transform:
   m_GameObject: {fileID: 451335225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3511899, y: 2.32, z: -10.71}
+  m_LocalPosition: {x: 1.3511899, y: 2.5199997, z: -11.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16079,6 +16160,7 @@ Transform:
   m_Children:
   - {fileID: 289657866}
   - {fileID: 1494953899}
+  - {fileID: 97027409}
   m_Father: {fileID: 338363587}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1414657636
@@ -47826,7 +47908,7 @@ Transform:
   m_GameObject: {fileID: 1607418734}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3511899, y: 2.32, z: -10.71}
+  m_LocalPosition: {x: 1.3511899, y: 2.5199997, z: -11.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54160,6 +54242,14 @@ PrefabInstance:
     - target: {fileID: 6403511388776669554, guid: f54229eb1cf143c44b03869903ff662e, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8243556336126073559, guid: f54229eb1cf143c44b03869903ff662e, type: 3}
+      propertyPath: walkSpeed
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8243556336126073559, guid: f54229eb1cf143c44b03869903ff662e, type: 3}
+      propertyPath: jumpHeight
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8243556336126073559, guid: f54229eb1cf143c44b03869903ff662e, type: 3}
       propertyPath: cameraTransform

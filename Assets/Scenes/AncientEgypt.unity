@@ -48001,84 +48001,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 6
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &1497203040
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1767581939}
-    m_Modifications:
-    - target: {fileID: 98359626907265530, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -29.009258
-      objectReference: {fileID: 0}
-    - target: {fileID: 98359626907265530, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -10.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 98359626907265530, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -19.806168
-      objectReference: {fileID: 0}
-    - target: {fileID: 98359626907265530, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 98359626907265530, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 98359626907265530, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 98359626907265530, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 98359626907265530, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 98359626907265530, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 98359626907265530, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2038446408405809793, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: m_Name
-      value: DropOffAreaPlaceholder
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751949049058757718, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: doorToOpen
-      value: 
-      objectReference: {fileID: 593744289}
-    - target: {fileID: 6751949049058757718, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: uniqueZoneID
-      value: AnhkDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751949049058757718, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: spawnOnlyOnce
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6751949049058757718, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-      propertyPath: requiredItemId
-      value: Ankh
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
---- !u!4 &1497203041 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 98359626907265530, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
-  m_PrefabInstance: {fileID: 1497203040}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1520221654
 GameObject:
   m_ObjectHideFlags: 0
@@ -55808,7 +55730,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1497203041}
   - {fileID: 268943324}
   - {fileID: 1152050555}
   - {fileID: 1872837857}
@@ -56252,6 +56173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DropOffAreaPlaceholder (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6751949049058757718, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
+      propertyPath: doorToOpen
+      value: 
+      objectReference: {fileID: 593744289}
     - target: {fileID: 8226926029395489684, guid: 430d2304a3a2a9a4a8b698cd5cd0580e, type: 3}
       propertyPath: m_Size.x
       value: 4

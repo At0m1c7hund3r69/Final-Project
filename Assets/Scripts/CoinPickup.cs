@@ -8,6 +8,7 @@ public class Coin : MonoBehaviour
     [Header("Save State")]
     [Tooltip("Give this coin a unique ID so it doesn't respawn")]
     public string uniqueSaveID;
+    private string fullID;
 
     [SerializeField] private int value = 1;
     [SerializeField] private float rotateSpeed = 120f;
@@ -18,7 +19,12 @@ public class Coin : MonoBehaviour
 
     private void Start()
     {
-        if (!string.IsNullOrEmpty(uniqueSaveID) && collectedCoins.Contains(uniqueSaveID))
+        if (!string.IsNullOrEmpty(uniqueSaveID))
+        {
+            fullID = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name + "_" + uniqueSaveID;
+        }
+
+        if (!string.IsNullOrEmpty(fullID) && collectedCoins.Contains(fullID))
         {
             Destroy(gameObject);
         }
@@ -50,9 +56,9 @@ public class Coin : MonoBehaviour
                 AudioSource.PlayClipAtPoint(pickupSound, transform.position);
             }
 
-            if (!string.IsNullOrEmpty(uniqueSaveID))
+            if (!string.IsNullOrEmpty(fullID))
             {
-                collectedCoins.Add(uniqueSaveID);
+                collectedCoins.Add(fullID);
             }
 
             Destroy(gameObject);

@@ -8,6 +8,7 @@ public class LevelGoalRunning : MonoBehaviour
     private static HashSet<string> collectedGoals = new HashSet<string>();
 
     public string uniqueGoalID;
+    private string fullID;
 
     [Header("References")]
     [SerializeField] private Transform player;
@@ -32,7 +33,12 @@ public class LevelGoalRunning : MonoBehaviour
 
     private void Start()
     {
-        if (!string.IsNullOrEmpty(uniqueGoalID) && collectedGoals.Contains(uniqueGoalID))
+        if (!string.IsNullOrEmpty(uniqueGoalID))
+        {
+            fullID = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name + "_" + uniqueGoalID;
+        }
+
+        if (!string.IsNullOrEmpty(fullID) && collectedGoals.Contains(fullID))
         {
             Destroy(gameObject);
         }
@@ -129,9 +135,9 @@ public class LevelGoalRunning : MonoBehaviour
 
         if (grabCollector != null)
         {
-            if (!string.IsNullOrEmpty(uniqueGoalID))
+            if (!string.IsNullOrEmpty(fullID))
             {
-                collectedGoals.Add(uniqueGoalID);
+                collectedGoals.Add(fullID);
             }
 
             if (LevelGoalManager.Instance != null)

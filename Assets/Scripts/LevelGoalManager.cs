@@ -76,11 +76,6 @@ public class LevelGoalManager : MonoBehaviour
         GrandTotalCollected += amount;
 
         UpdateObjectiveText();
-
-        if (CurrentCount >= requiredCount)
-        {
-            CompleteLevel();
-        }
     }
 
     private void UpdateObjectiveText()
@@ -88,24 +83,6 @@ public class LevelGoalManager : MonoBehaviour
         if (objectiveText != null)
         {
             objectiveText.text = "Hourglasses: " + CurrentCount + " / " + requiredCount;
-        }
-    }
-
-    private void CompleteLevel()
-    {
-        LevelComplete = true;
-        Debug.Log("Level Complete!");
-
-        if (GrandTotalCollected >= globalRequiredCount)
-        {
-            if (pauseMenuManager != null)
-            {
-                pauseMenuManager.ShowWinMenu();
-            }
-        }
-        else
-        {
-            Debug.Log("Level finished, but global total not met yet. Move to next area.");
         }
     }
 }

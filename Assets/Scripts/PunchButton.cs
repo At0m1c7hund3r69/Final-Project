@@ -18,6 +18,14 @@ public class PunchButton : MonoBehaviour
     [SerializeField] private GameObject objectToSpawn;
     [SerializeField] private GameObject objectToDestroy;
 
+    [Header("Hub World Win Settings")]
+    [Tooltip("Check this ONLY for the final button in the Hub World")]
+    [SerializeField] private bool isWinButton = false;
+    [Tooltip("How many hourglasses are required to press this?")]
+    [SerializeField] private int requiredHourglasses = 9;
+    [Tooltip("Drag the Hub World's PauseMenuManager here")]
+    [SerializeField] private PauseMenuManager pauseMenuManager;
+
     private bool hasBeenPressed;
 
     private void Start()
@@ -66,6 +74,20 @@ public class PunchButton : MonoBehaviour
         if (singleUse && hasBeenPressed)
             return;
 
+        if (isWinButton)
+        {
+            if (LevelGoalManager.GrandTotalCollected < requiredHourglasses)
+            {
+                Debug.Log("Player tried to win, but doesn't have enough Hourglasses yet!");
+                return;
+            }
+
+            if (pauseMenuManager != null)
+            {
+                pauseMenuManager.ShowWinMenu();
+            }
+        }
+
         hasBeenPressed = true;
 
         if (!string.IsNullOrEmpty(uniqueButtonID))
@@ -86,7 +108,6 @@ public class PunchButton : MonoBehaviour
         if (objectToDestroy != null)
         {
             Destroy(objectToDestroy);
-            Debug.Log($"{name}: Target object destroyed!");
         }
     }
 }

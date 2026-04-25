@@ -7,6 +7,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private GameObject howToPlayPanel;
     [SerializeField] private GameObject creditsPanel;
     [SerializeField] private string gameplaySceneName = "SampleScene";
+    [SerializeField] private string gameplaySceneName2 = "Intro";
 
     private void Start()
     {

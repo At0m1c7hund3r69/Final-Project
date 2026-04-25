@@ -5,7 +5,9 @@ public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private GameObject howToPlayPanel;
+    [SerializeField] private GameObject creditsPanel;
     [SerializeField] private string gameplaySceneName = "SampleScene";
+    [SerializeField] private string gameplaySceneName2 = "Intro";
 
     private void Start()
     {
@@ -29,8 +31,15 @@ public class MainMenuManager : MonoBehaviour
         howToPlayPanel.SetActive(true);
     }
 
+    public void OpenCredits()
+    {
+        mainMenuPanel.SetActive(false);
+        creditsPanel.SetActive(true);
+    }
+
     public void BackToMainMenu()
     {
+        creditsPanel.SetActive(false);
         howToPlayPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
     }

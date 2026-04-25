@@ -1473,9 +1473,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6941af83708194cbcd3b01a6839817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelGoalManager
+  levelID: Level_1
   requiredCount: 3
   objectiveText: {fileID: 0}
-  levelCompleteUI: {fileID: 0}
+  pauseMenuManager: {fileID: 0}
 --- !u!4 &2042961465
 Transform:
   m_ObjectHideFlags: 0
@@ -1882,6 +1883,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 703814723}
+    - target: {fileID: 3485848831565485829, guid: 6ca08f65df031a845a350f8f7602d08f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7888223072807171176, guid: 6ca08f65df031a845a350f8f7602d08f, type: 3}
       propertyPath: m_Name
       value: GamplayCanvas

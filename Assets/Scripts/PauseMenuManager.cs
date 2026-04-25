@@ -84,12 +84,21 @@ public class PauseMenuManager : MonoBehaviour
     public void RestartLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
     public void LoadMainMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenuSceneName);
+        Coin.ResetCollectedBells();
+        CoinManager.ResetScore();
+        GrabbableObject.ResetDeliveredItems();
+        LevelGoalManager.ResetGoals();
+        PunchButton.ResetButtons();
+        BridgeTransition.ResetBridges();
+        LevelGoalRunning.ResetLevelGoals();
+        BreakableWall.ResetBreakableWalls();
+        SequencePuzzleManager.ResetSequencePuzzles();
     }
 }

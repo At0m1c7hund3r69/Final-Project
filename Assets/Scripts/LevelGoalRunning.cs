@@ -8,6 +8,7 @@ public class LevelGoalRunning : MonoBehaviour
     private static HashSet<string> collectedGoals = new HashSet<string>();
 
     public string uniqueGoalID;
+    private string fullID;
 
     [Header("References")]
     [SerializeField] private Transform player;
@@ -16,6 +17,9 @@ public class LevelGoalRunning : MonoBehaviour
     [SerializeField] private float runDistance = 8f;
     [SerializeField] private float repathInterval = 0.2f;
     [SerializeField] private float navMeshSampleRadius = 4f;
+
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip pickupSound;
 
     private NavMeshAgent agent;
     private float nextRepathTime;
@@ -29,10 +33,20 @@ public class LevelGoalRunning : MonoBehaviour
 
     private void Start()
     {
-        if (!string.IsNullOrEmpty(uniqueGoalID) && collectedGoals.Contains(uniqueGoalID))
+        if (!string.IsNullOrEmpty(uniqueGoalID))
+        {
+            fullID = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name + "_" + uniqueGoalID;
+        }
+
+        if (!string.IsNullOrEmpty(fullID) && collectedGoals.Contains(fullID))
         {
             Destroy(gameObject);
         }
+    }
+
+    public static void ResetLevelGoals()
+    {
+        collectedGoals.Clear();
     }
 
     private void Update()
@@ -121,14 +135,19 @@ public class LevelGoalRunning : MonoBehaviour
 
         if (grabCollector != null)
         {
-            if (!string.IsNullOrEmpty(uniqueGoalID))
+            if (!string.IsNullOrEmpty(fullID))
             {
-                collectedGoals.Add(uniqueGoalID);
+                collectedGoals.Add(fullID);
             }
 
             if (LevelGoalManager.Instance != null)
             {
                 LevelGoalManager.Instance.CollectObjective(1);
+            }
+
+            if (pickupSound != null)
+            {
+                AudioSource.PlayClipAtPoint(pickupSound, transform.position);
             }
 
             Destroy(gameObject);

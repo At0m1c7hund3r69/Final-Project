@@ -14,8 +14,12 @@ public class LevelGoalManager : MonoBehaviour
     [Tooltip("Type a unique name for this level so the manager remembers its specific score (e.g., 'DinosaurJungle')")]
     public string levelID = "Level_1";
 
-    [Header("Goal Settings")]
+    [Header("Level Goal Settings")]
     [SerializeField] private int requiredCount = 3;
+
+    [Header("Global Win Settings")]
+    [Tooltip("Total hourglasses needed across ALL levels to trigger the Win Screen")]
+    [SerializeField] private int globalRequiredCount = 9;
 
     [Header("Optional UI")]
     [SerializeField] private TMP_Text objectiveText;
@@ -57,6 +61,12 @@ public class LevelGoalManager : MonoBehaviour
         UpdateObjectiveText();
     }
 
+    public static void ResetGoals()
+    {
+        GrandTotalCollected = 0;
+        levelProgress.Clear();
+    }
+
     public void CollectObjective(int amount = 1)
     {
         if (LevelComplete)
@@ -66,30 +76,13 @@ public class LevelGoalManager : MonoBehaviour
         GrandTotalCollected += amount;
 
         UpdateObjectiveText();
-
-        if (CurrentCount >= requiredCount)
-        {
-            CompleteLevel();
-        }
     }
 
     private void UpdateObjectiveText()
     {
         if (objectiveText != null)
         {
-            objectiveText.text = "Objectives: " + CurrentCount + " / " + requiredCount;
-        }
-    }
-
-    private void CompleteLevel()
-    {
-        LevelComplete = true;
-
-        Debug.Log("Level Complete!");
-
-        if (pauseMenuManager != null)
-        {
-            pauseMenuManager.ShowWinMenu();
+            objectiveText.text = "Hourglasses: " + CurrentCount + " / " + requiredCount;
         }
     }
 }

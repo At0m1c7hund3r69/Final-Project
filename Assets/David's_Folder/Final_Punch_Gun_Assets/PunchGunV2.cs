@@ -82,18 +82,18 @@ public class PunchGunV2 : MonoBehaviour
 
         currentSpeed = anim.GetFloat("Speed");
 
-        bool isShiftPressed = Keyboard.current.shiftKey.wasPressedThisFrame;
-        bool isGamepadYPressed = Gamepad.current != null && Gamepad.current.yButton.wasPressedThisFrame;
+        bool isRightClickPressed = Mouse.current != null && Mouse.current.rightButton.wasPressedThisFrame;
+        bool isGamepadLTPressed = Gamepad.current != null && Gamepad.current.leftTrigger.wasPressedThisFrame;
 
-        if ((isShiftPressed || isGamepadYPressed) && canChangeGlove == true)
+        if ((isRightClickPressed || isGamepadLTPressed) && canChangeGlove == true)
         {
             isPunchGlove = !isPunchGlove;
         }
 
-        bool isFPressed = Keyboard.current.fKey.wasPressedThisFrame;
-        bool isGamepadXPressed = Gamepad.current != null && Gamepad.current.xButton.wasPressedThisFrame;
+        bool isLeftClickPressed = Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
+        bool isGamepadRTPressed = Gamepad.current != null && Gamepad.current.rightTrigger.wasPressedThisFrame;
 
-        if ((isFPressed || isGamepadXPressed) && canPunch == true)
+        if ((isLeftClickPressed || isGamepadRTPressed) && canPunch == true)
         {
             Debug.Log("Space pressed!");
 

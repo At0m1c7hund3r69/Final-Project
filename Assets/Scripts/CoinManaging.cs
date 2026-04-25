@@ -6,7 +6,7 @@ public class CoinManager : MonoBehaviour
     public static CoinManager Instance { get; private set; }
 
     [SerializeField] private TMP_Text coinText;
-    public int Coins { get; private set; }
+    public static int Coins { get; private set; }
 
     private void Awake()
     {
@@ -20,18 +20,22 @@ public class CoinManager : MonoBehaviour
         UpdateCoinText();
     }
 
+    public static void ResetScore()
+    {
+        Coins = 0;
+    }
+
     public void AddCoins(int amount)
     {
         Coins += amount;
         UpdateCoinText();
-        Debug.Log("Coins: " + Coins);
     }
 
     private void UpdateCoinText()
     {
         if (coinText != null)
         {
-            coinText.text = "Coins: " + Coins;
+            coinText.text = "Bells: " + Coins;
         }
     }
 }

@@ -30,8 +30,6 @@ public class LogAdhesion : MonoBehaviour
     {
         if (playerController != null)
         {
-            // THE FIX: Only move the player if their feet are actually touching the ground.
-            // The moment they jump, isGrounded becomes false, and the log stops pulling them down!
             if (playerController.isGrounded)
             {
                 Vector3 platformMovement = transform.position - lastPosition;

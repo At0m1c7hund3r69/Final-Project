@@ -2951,10 +2951,9 @@ GameObject:
   m_Component:
   - component: {fileID: 314565776}
   - component: {fileID: 314565775}
-  - component: {fileID: 314565777}
   m_Layer: 0
   m_Name: AutonomousOrbitHinge (1)
-  m_TagString: Untagged
+  m_TagString: Log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2988,18 +2987,6 @@ Transform:
   - {fileID: 1325356705}
   m_Father: {fileID: 806282833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &314565777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314565774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe8675e11bdbb0847bdb9e1a15722005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LogAdhesion
 --- !u!1 &324690387
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,10 +3099,9 @@ GameObject:
   m_Component:
   - component: {fileID: 327521732}
   - component: {fileID: 327521731}
-  - component: {fileID: 327521733}
   m_Layer: 0
   m_Name: AutonomousOrbitHinge (2)
-  m_TagString: Untagged
+  m_TagString: Log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3149,18 +3135,6 @@ Transform:
   - {fileID: 757813101}
   m_Father: {fileID: 806282833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &327521733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327521730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe8675e11bdbb0847bdb9e1a15722005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LogAdhesion
 --- !u!1 &331714266
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,6 +4139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3047494921934007689, guid: 8aa92672bcbaeb44088cec58687e2519, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8647412213350990874, guid: 8aa92672bcbaeb44088cec58687e2519, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.544
@@ -4527,10 +4505,9 @@ GameObject:
   m_Component:
   - component: {fileID: 560584866}
   - component: {fileID: 560584868}
-  - component: {fileID: 560584867}
   - component: {fileID: 560584870}
   - component: {fileID: 560584873}
-  - component: {fileID: 560584871}
+  - component: {fileID: 560584874}
   m_Layer: 0
   m_Name: AsteroidPlaceholder
   m_TagString: Log
@@ -4555,27 +4532,6 @@ Transform:
   - {fileID: 1256190746}
   m_Father: {fileID: 716660381}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &560584867
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560584865}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &560584868
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4643,27 +4599,6 @@ RotationConstraint:
   m_Active: 1
   m_IsLocked: 0
   m_Sources: []
---- !u!65 &560584871
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560584865}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1.5, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &560584873
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4691,6 +4626,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &560584874
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560584865}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!43 &598719159
 Mesh:
   m_ObjectHideFlags: 0
@@ -5013,10 +4969,9 @@ GameObject:
   m_Component:
   - component: {fileID: 716660381}
   - component: {fileID: 716660380}
-  - component: {fileID: 716660382}
   m_Layer: 0
   m_Name: AutonomousOrbitHinge
-  m_TagString: Untagged
+  m_TagString: Log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5050,18 +5005,6 @@ Transform:
   - {fileID: 560584866}
   m_Father: {fileID: 806282833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &716660382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716660379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe8675e11bdbb0847bdb9e1a15722005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LogAdhesion
 --- !u!1 &738493038
 GameObject:
   m_ObjectHideFlags: 0
@@ -5113,7 +5056,6 @@ GameObject:
   m_Component:
   - component: {fileID: 757813101}
   - component: {fileID: 757813104}
-  - component: {fileID: 757813103}
   - component: {fileID: 757813102}
   - component: {fileID: 757813106}
   - component: {fileID: 757813107}
@@ -5159,27 +5101,6 @@ RotationConstraint:
   m_Active: 1
   m_IsLocked: 0
   m_Sources: []
---- !u!65 &757813103
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757813100}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &757813104
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5271,12 +5192,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.5, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &806282832
 GameObject:
   m_ObjectHideFlags: 0
@@ -8451,7 +8372,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1256190746}
-  - component: {fileID: 1256190747}
+  - component: {fileID: 1256190748}
+  - component: {fileID: 1256190749}
   m_Layer: 2
   m_Name: LogAdhesion (2)
   m_TagString: Untagged
@@ -8474,8 +8396,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 560584866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1256190747
-BoxCollider:
+--- !u!114 &1256190748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256190745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8675e11bdbb0847bdb9e1a15722005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LogAdhesion
+--- !u!135 &1256190749
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8493,7 +8427,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 3}
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1271429737
 GameObject:
@@ -9452,10 +9386,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1325356705}
   - component: {fileID: 1325356708}
-  - component: {fileID: 1325356707}
   - component: {fileID: 1325356706}
   - component: {fileID: 1325356711}
-  - component: {fileID: 1325356709}
+  - component: {fileID: 1325356712}
   m_Layer: 0
   m_Name: AsteroidPlaceholder
   m_TagString: Log
@@ -9498,27 +9431,6 @@ RotationConstraint:
   m_Active: 1
   m_IsLocked: 0
   m_Sources: []
---- !u!65 &1325356707
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325356704}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1325356708
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9568,27 +9480,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1325356709
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325356704}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1.5, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &1325356711
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9616,6 +9507,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &1325356712
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325356704}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1342397865
 GameObject:
   m_ObjectHideFlags: 0
@@ -10582,7 +10494,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1508455090}
-  - component: {fileID: 1508455091}
+  - component: {fileID: 1508455092}
+  - component: {fileID: 1508455093}
   m_Layer: 2
   m_Name: LogAdhesion (1)
   m_TagString: Untagged
@@ -10605,8 +10518,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1325356705}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1508455091
-BoxCollider:
+--- !u!114 &1508455092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508455089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8675e11bdbb0847bdb9e1a15722005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LogAdhesion
+--- !u!135 &1508455093
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10624,7 +10549,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 3}
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1538257306
 PrefabInstance:
@@ -12189,7 +12114,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1686078693}
-  - component: {fileID: 1686078694}
+  - component: {fileID: 1686078695}
+  - component: {fileID: 1686078696}
   m_Layer: 2
   m_Name: LogAdhesion
   m_TagString: Untagged
@@ -12212,8 +12138,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 757813101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1686078694
-BoxCollider:
+--- !u!114 &1686078695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686078692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8675e11bdbb0847bdb9e1a15722005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LogAdhesion
+--- !u!135 &1686078696
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12231,7 +12169,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 3}
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1701359578
 PrefabInstance:

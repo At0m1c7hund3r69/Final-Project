@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
+using UnityEngine.Windows;
 
 
 [RequireComponent(typeof(CharacterController))]
@@ -30,6 +32,12 @@ public class PlayerMovement : MonoBehaviour
     private float verticalVelocity;
     private float pitch;
 
+
+    //Added by David:
+
+    private MonkeyAnimationControl myAnimator;
+
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -42,14 +50,19 @@ public class PlayerMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        myAnimator = GameObject.Find("FinalMonkeyRig").GetComponent<MonkeyAnimationControl>();
+
         if (cameraTransform == null && Camera.main != null)
             cameraTransform = Camera.main.transform;
+
+        
     }
 
     private void Update()
     {
         HandleLook();
         HandleMovement();
+        
     }
 
     private void HandleLook()
@@ -87,16 +100,22 @@ public class PlayerMovement : MonoBehaviour
 
         if (moveDirection.sqrMagnitude > 1f)
             moveDirection.Normalize();
+            
 
         float currentSpeed = walkSpeed;
 
         if (controller.isGrounded)
         {
+            
+
             if (verticalVelocity < 0f)
                 verticalVelocity = -2f;
+                
+                
 
             if (jumpAction.WasPressedThisFrame())
                 verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                
 
         }
 
@@ -106,6 +125,14 @@ public class PlayerMovement : MonoBehaviour
         velocity.y = verticalVelocity;
 
         controller.Move(velocity * Time.deltaTime);
+
+
     }
+
+
+    
+    
+
+
 }
 

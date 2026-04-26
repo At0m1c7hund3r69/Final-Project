@@ -19,7 +19,10 @@ public class LevelGoalRunning : MonoBehaviour
     [SerializeField] private float navMeshSampleRadius = 4f;
 
     [Header("Audio Settings")]
-    [SerializeField] private AudioClip pickupSound;
+    public AudioSource pickupPlayer;
+    public AudioSource yeahPlayer;
+    public AudioClip pickup;
+    public AudioClip yeah;
 
     private NavMeshAgent agent;
     private float nextRepathTime;
@@ -145,9 +148,10 @@ public class LevelGoalRunning : MonoBehaviour
                 LevelGoalManager.Instance.CollectObjective(1);
             }
 
-            if (pickupSound != null)
+            if (yeahPlayer != null)
             {
-                AudioSource.PlayClipAtPoint(pickupSound, transform.position);
+                yeahPlayer.PlayOneShot(pickup);
+                pickupPlayer.PlayOneShot(yeah);
             }
 
             Destroy(gameObject);

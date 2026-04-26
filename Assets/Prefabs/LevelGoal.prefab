@@ -193,10 +193,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ad1c46ecbacbf459fff35388b9fbf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelGoalRunning
+  uniqueGoalID: 
   player: {fileID: 8811744457818235738, guid: f54229eb1cf143c44b03869903ff662e, type: 3}
   runDistance: 8
   repathInterval: 0.2
   navMeshSampleRadius: 4
+  pickupPlayer: {fileID: 0}
+  yeahPlayer: {fileID: 0}
 --- !u!195 &3256898055862452969
 NavMeshAgent:
   m_ObjectHideFlags: 0

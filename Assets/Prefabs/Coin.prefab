@@ -195,8 +195,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9c36649af98b140b98d1c242ff0daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
+  uniqueSaveID: 87
   value: 1
   rotateSpeed: 120
+  pickupSound: {fileID: 8300000, guid: 627d11d79495cac4da78758cbd36c9bc, type: 3}
 --- !u!82 &1131528504766892722
 AudioSource:
   m_ObjectHideFlags: 0

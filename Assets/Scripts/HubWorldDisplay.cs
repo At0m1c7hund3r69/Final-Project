@@ -19,9 +19,9 @@ public class HubWorldDisplay : MonoBehaviour
         // This ensures the board updates in real-time as they walk around!
         if (boardText != null)
         {
-            boardText.text = "Game Progress\n\n" +
-                             "Bells: " + CoinManager.Coins + " / " + maxBells + "\n" +
-                             "Hourglasses: " + LevelGoalManager.GrandTotalCollected + " / " + maxHourglasses;
+            boardText.text = 
+                             " " + CoinManager.Coins + " / " + maxBells + "\n" + "\n" +
+                             " " + LevelGoalManager.GrandTotalCollected + " / " + maxHourglasses;
         }
     }
 }

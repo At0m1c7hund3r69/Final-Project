@@ -82,7 +82,7 @@ public class LevelGoalManager : MonoBehaviour
     {
         if (objectiveText != null)
         {
-            objectiveText.text = "Hourglasses: " + CurrentCount + " / " + requiredCount;
+            objectiveText.text = " " + CurrentCount + " / " + requiredCount;
         }
     }
 }

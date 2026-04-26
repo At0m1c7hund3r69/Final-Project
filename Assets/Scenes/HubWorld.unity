@@ -545,6 +545,10 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: OuterSpace
       objectReference: {fileID: 0}
+    - target: {fileID: 6245604297556437976, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0cb51ec3f10e7074583e1428e248cab8, type: 2}
     - target: {fileID: 8397661761413990324, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
       propertyPath: m_Name
       value: LevelTransition Space
@@ -8586,6 +8590,10 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: AncientEgypt
       objectReference: {fileID: 0}
+    - target: {fileID: 6245604297556437976, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0cb51ec3f10e7074583e1428e248cab8, type: 2}
     - target: {fileID: 8397661761413990324, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
       propertyPath: m_Name
       value: LevelTransition Eygpt
@@ -14390,6 +14398,10 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: DinosaurJungle
       objectReference: {fileID: 0}
+    - target: {fileID: 6245604297556437976, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0cb51ec3f10e7074583e1428e248cab8, type: 2}
     - target: {fileID: 8397661761413990324, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
       propertyPath: m_Name
       value: LevelTransition Dinosaur

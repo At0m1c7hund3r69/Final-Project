@@ -22982,10 +22982,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1613190536}
     m_Modifications:
-    - target: {fileID: -7511558181221131132, guid: 5fb8e47e7eeefd544be4b769b9203a4f, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 2299b2dc01cfdcb47bfc43787a0bd6b6, type: 2}
     - target: {fileID: -8679921383154817045, guid: dbe7e47a31fc83d4c94cc230e9971bdd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -23043,6 +23039,10 @@ PrefabInstance:
       value: HourglassRig
       objectReference: {fileID: 0}
     - target: {fileID: 7643039627484543061, guid: dbe7e47a31fc83d4c94cc230e9971bdd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2299b2dc01cfdcb47bfc43787a0bd6b6, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5fb8e47e7eeefd544be4b769b9203a4f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2299b2dc01cfdcb47bfc43787a0bd6b6, type: 2}
@@ -30015,10 +30015,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 664935293}
     m_Modifications:
-    - target: {fileID: -7511558181221131132, guid: 5fb8e47e7eeefd544be4b769b9203a4f, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 2299b2dc01cfdcb47bfc43787a0bd6b6, type: 2}
     - target: {fileID: -8679921383154817045, guid: dbe7e47a31fc83d4c94cc230e9971bdd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -30076,6 +30072,10 @@ PrefabInstance:
       value: HourglassRig
       objectReference: {fileID: 0}
     - target: {fileID: 7643039627484543061, guid: dbe7e47a31fc83d4c94cc230e9971bdd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2299b2dc01cfdcb47bfc43787a0bd6b6, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5fb8e47e7eeefd544be4b769b9203a4f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2299b2dc01cfdcb47bfc43787a0bd6b6, type: 2}
@@ -34204,10 +34204,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1096413478}
     m_Modifications:
-    - target: {fileID: -7511558181221131132, guid: 5fb8e47e7eeefd544be4b769b9203a4f, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 2299b2dc01cfdcb47bfc43787a0bd6b6, type: 2}
     - target: {fileID: -8679921383154817045, guid: dbe7e47a31fc83d4c94cc230e9971bdd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -34265,6 +34261,10 @@ PrefabInstance:
       value: HourglassRig
       objectReference: {fileID: 0}
     - target: {fileID: 7643039627484543061, guid: dbe7e47a31fc83d4c94cc230e9971bdd, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2299b2dc01cfdcb47bfc43787a0bd6b6, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5fb8e47e7eeefd544be4b769b9203a4f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2299b2dc01cfdcb47bfc43787a0bd6b6, type: 2}
@@ -41549,6 +41549,10 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: HubWorld
       objectReference: {fileID: 0}
+    - target: {fileID: 6245604297556437976, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0cb51ec3f10e7074583e1428e248cab8, type: 2}
     - target: {fileID: 8397661761413990324, guid: d18cb6c01ae921b45a20d831ebf694bf, type: 3}
       propertyPath: m_Name
       value: LevelTransition

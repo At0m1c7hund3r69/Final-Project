@@ -24,11 +24,20 @@ MonoBehaviour:
     m_path: Assets/Scenes/MainMenu.unity
     m_guid: bbc9e8d1a2f1d9d448da03cc962317f0
   - m_enabled: 1
-    m_path: Assets/Taylor_Assets/Scenes/HubWorld.unity
+    m_path: Assets/Scenes/HubWorld.unity
     m_guid: cdbd9b11190425b42b5acfda60b0695e
   - m_enabled: 1
-    m_path: Assets/Taylor_Assets/Scenes/DinosaurJungle.unity
+    m_path: Assets/Scenes/DinosaurJungle.unity
     m_guid: ccbec21897cec714c9a870ec50cb60ba
+  - m_enabled: 1
+    m_path: Assets/Scenes/AncientEgypt.unity
+    m_guid: 05bfd678f76e38c4aa2849430ac2d60c
+  - m_enabled: 1
+    m_path: Assets/Scenes/OuterSpace.unity
+    m_guid: 0aaa7fc242e0d6047839d90f97a009ea
+  - m_enabled: 1
+    m_path: Assets/Scenes/Intro.unity
+    m_guid: 033312c00f9f47842ac5b7c490bc56d6
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:

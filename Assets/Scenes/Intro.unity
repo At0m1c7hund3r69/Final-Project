@@ -354,6 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a752a4fa069301f42adfb8680cf8b072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneToGame
+  videoPlayer: {fileID: 2032434622}
+  nextSceneName: HubWorld
 --- !u!4 &972892858
 Transform:
   m_ObjectHideFlags: 0

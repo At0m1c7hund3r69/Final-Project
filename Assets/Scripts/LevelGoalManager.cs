@@ -27,6 +27,10 @@ public class LevelGoalManager : MonoBehaviour
     [Header("Menu Reference")]
     [SerializeField] private PauseMenuManager pauseMenuManager;
 
+    [Header("Sign From God")]
+    [Tooltip("The spotlight that points at the final button")]
+    [SerializeField] private GameObject signFromGodLight;
+
     public int CurrentCount
     {
         get
@@ -59,6 +63,7 @@ public class LevelGoalManager : MonoBehaviour
         }
 
         UpdateObjectiveText();
+        CheckSignFromGod();
     }
 
     public static void ResetGoals()
@@ -76,6 +81,7 @@ public class LevelGoalManager : MonoBehaviour
         GrandTotalCollected += amount;
 
         UpdateObjectiveText();
+        CheckSignFromGod();
     }
 
     private void UpdateObjectiveText()
@@ -83,6 +89,14 @@ public class LevelGoalManager : MonoBehaviour
         if (objectiveText != null)
         {
             objectiveText.text = " " + CurrentCount + " / " + requiredCount;
+        }
+    }
+
+    private void CheckSignFromGod()
+    {
+        if (signFromGodLight != null)
+        {
+            signFromGodLight.SetActive(GrandTotalCollected >= globalRequiredCount);
         }
     }
 }

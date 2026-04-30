@@ -1,9 +1,8 @@
 using UnityEngine;
-using System.Collections.Generic; // Required for static memory
+using System.Collections.Generic;
 
 public class PunchButton : MonoBehaviour
 {
-    // Static memory to remember if this button was pressed across scene loads
     private static HashSet<string> pressedButtons = new HashSet<string>();
 
     [Header("Persistence")]

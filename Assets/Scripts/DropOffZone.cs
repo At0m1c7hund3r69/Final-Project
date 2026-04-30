@@ -20,6 +20,12 @@ public class DropOffZone : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private bool spawnOnlyOnce = true;
 
+    [Header("Visuals On Delivery")]
+    [Tooltip("The non-interactive version of the item to leave on the pedestal")]
+    [SerializeField] private GameObject deliveredPropPrefab;
+    [Tooltip("The exact anchor location to spawn the dummy prop")]
+    [SerializeField] private Transform propSpawnPoint;
+
     [Header("Door Unlocking (New)")]
     [Tooltip("Assign the door object you want to disappear when the delivery is complete")]
     [SerializeField] private GameObject doorToOpen;
@@ -29,16 +35,19 @@ public class DropOffZone : MonoBehaviour
 
     private void Start()
     {
-        // When the scene loads, check if this zone was already completed previously
         if (!string.IsNullOrEmpty(uniqueZoneID) && completedZones.Contains(uniqueZoneID))
         {
             currentQuantity = requiredQuantity;
             UnlockDoor();
 
-            // If it was supposed to spawn a reward item, make sure it still spawns
-            if (spawnOnlyOnce)
+            //if (spawnOnlyOnce)
+            //{
+            //    TrySpawnObject();
+            //}
+
+            if (deliveredPropPrefab != null && propSpawnPoint != null)
             {
-                TrySpawnObject();
+                Instantiate(deliveredPropPrefab, propSpawnPoint.position, propSpawnPoint.rotation);
             }
         }
     }
@@ -69,9 +78,13 @@ public class DropOffZone : MonoBehaviour
 
         Debug.Log($"{name}: Delivered {currentQuantity}/{requiredQuantity} of {requiredItemId}");
 
+        if (destroyOnDelivery && deliveredPropPrefab != null && propSpawnPoint != null)
+        {
+            Instantiate(deliveredPropPrefab, propSpawnPoint.position, propSpawnPoint.rotation, propSpawnPoint);
+        }
+
         if (currentQuantity >= requiredQuantity)
         {
-            // Save the completion state to the global memory list
             if (!string.IsNullOrEmpty(uniqueZoneID))
             {
                 completedZones.Add(uniqueZoneID);
@@ -102,7 +115,6 @@ public class DropOffZone : MonoBehaviour
     {
         if (doorToOpen != null)
         {
-            // Instantly deactivate the physical door object to open the path
             doorToOpen.SetActive(false);
             Debug.Log($"{name}: Door opened!");
         }

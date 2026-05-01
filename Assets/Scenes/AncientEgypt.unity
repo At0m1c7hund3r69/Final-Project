@@ -37384,7 +37384,7 @@ GameObject:
   - component: {fileID: 363320438}
   - component: {fileID: 363320437}
   - component: {fileID: 363320436}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51773,7 +51773,7 @@ GameObject:
   - component: {fileID: 398397481}
   - component: {fileID: 398397480}
   - component: {fileID: 398397479}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Stairs (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125742,6 +125742,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 68056599052834348, guid: 8aa92672bcbaeb44088cec58687e2519, type: 3}
+      propertyPath: gravity
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 68056599052834348, guid: 8aa92672bcbaeb44088cec58687e2519, type: 3}
       propertyPath: walkSpeed
       value: 5.5
       objectReference: {fileID: 0}
@@ -126261,6 +126265,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4294415982480617527, guid: f3936ae29d95ead439bac7e82a03668c, type: 3}
       insertIndex: 1
       addedObject: {fileID: 1361698610}
+    - targetCorrespondingSourceObject: {fileID: 4294415982480617527, guid: f3936ae29d95ead439bac7e82a03668c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1355159227}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5489433739672814476, guid: f3936ae29d95ead439bac7e82a03668c, type: 3}
       insertIndex: -1
@@ -135275,6 +135282,7 @@ MonoBehaviour:
   globalRequiredCount: 9
   objectiveText: {fileID: 484833436}
   pauseMenuManager: {fileID: 1643313576}
+  signFromGodLight: {fileID: 0}
 --- !u!1 &1198959212
 GameObject:
   m_ObjectHideFlags: 0
@@ -135776,6 +135784,68 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1215472076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1215472077}
+  - component: {fileID: 1215472079}
+  - component: {fileID: 1215472078}
+  m_Layer: 0
+  m_Name: SoundTest
+  m_TagString: Hourglass
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1215472077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215472076}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.042, y: 0.113, z: 0.213}
+  m_LocalScale: {x: 1.7262744, y: 1.96813, z: 1.96813}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1260317991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1215472078
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215472076}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1215472079
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215472076}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1217810359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135933,6 +136003,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4294415982480617527, guid: f3936ae29d95ead439bac7e82a03668c, type: 3}
       insertIndex: 1
       addedObject: {fileID: 329735134}
+    - targetCorrespondingSourceObject: {fileID: 4294415982480617527, guid: f3936ae29d95ead439bac7e82a03668c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1215472077}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5489433739672814476, guid: f3936ae29d95ead439bac7e82a03668c, type: 3}
       insertIndex: -1
@@ -162643,6 +162716,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7114946798060817467, guid: fbf15c4be4cf788489f0b56977dbacd1, type: 3}
   m_PrefabInstance: {fileID: 1283649628}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1286213826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286213827}
+  - component: {fileID: 1286213829}
+  - component: {fileID: 1286213828}
+  m_Layer: 0
+  m_Name: SoundTest
+  m_TagString: Hourglass
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1286213827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286213826}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.016, y: 0.185, z: 0.209}
+  m_LocalScale: {x: 1.7101562, y: 1.96813, z: 1.96813}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1040820264}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1286213828
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286213826}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1286213829
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286213826}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1293612084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163736,6 +163871,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6eea4536bebdbb469c0c5ad72b2d168, type: 3}
   m_PrefabInstance: {fileID: 1345672871}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1355159226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1355159227}
+  - component: {fileID: 1355159229}
+  - component: {fileID: 1355159228}
+  m_Layer: 0
+  m_Name: SoundTest
+  m_TagString: Hourglass
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1355159227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355159226}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.093, y: -0.036, z: 0.018}
+  m_LocalScale: {x: 1.7867764, y: 1.9681301, z: 1.96813}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 446768054}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1355159228
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355159226}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1355159229
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355159226}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1356591096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201183,6 +201380,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4294415982480617527, guid: f3936ae29d95ead439bac7e82a03668c, type: 3}
       insertIndex: 1
       addedObject: {fileID: 2077468758}
+    - targetCorrespondingSourceObject: {fileID: 4294415982480617527, guid: f3936ae29d95ead439bac7e82a03668c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1286213827}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5489433739672814476, guid: f3936ae29d95ead439bac7e82a03668c, type: 3}
       insertIndex: -1

@@ -5,7 +5,14 @@ public class GloveScript : MonoBehaviour
 
     public PunchGunV2 myGun;
 
-    
+    public AudioSource collectSource;
+
+    public AudioClip collectClip;
+
+    public AudioSource yeahSource;
+
+    public AudioClip yeahClip;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +33,16 @@ public class GloveScript : MonoBehaviour
             myGun.returnSpring();
 
             Debug.Log("Collider Triggered");
+        }
+
+        if (other.gameObject.tag == "Hourglass")
+        {
+            if(collectSource != null && yeahSource != null)
+            {
+                collectSource.PlayOneShot(collectClip);
+                yeahSource.PlayOneShot(yeahClip);
+            }
+            
         }
         
     }

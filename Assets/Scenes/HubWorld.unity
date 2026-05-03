@@ -7019,6 +7019,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7000673700505987507, guid: 6ca08f65df031a845a350f8f7602d08f, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000673700505987507, guid: 6ca08f65df031a845a350f8f7602d08f, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000673700505987507, guid: 6ca08f65df031a845a350f8f7602d08f, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 7888223072807171176, guid: 6ca08f65df031a845a350f8f7602d08f, type: 3}
       propertyPath: m_Name
       value: GamplayCanvas

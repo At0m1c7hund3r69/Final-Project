@@ -38,6 +38,12 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Intro.unity
     m_guid: 033312c00f9f47842ac5b7c490bc56d6
+  - m_enabled: 1
+    m_path: Assets/Scenes/Outro.unity
+    m_guid: 87c71ee2ede6545449964b3a0f425f63
+  - m_enabled: 1
+    m_path: Assets/Scenes/Outro100Percent.unity
+    m_guid: f1b23bd6753e7d2419128f2faed93e4b
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:

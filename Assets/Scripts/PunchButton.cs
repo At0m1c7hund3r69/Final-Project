@@ -77,14 +77,21 @@ public class PunchButton : MonoBehaviour
         {
             if (LevelGoalManager.GrandTotalCollected < requiredHourglasses)
             {
-                Debug.Log("Player tried to win, but doesn't have enough Hourglasses yet!");
                 return;
             }
 
-            if (pauseMenuManager != null)
+            bool gotAllBells = CoinManager.Coins >= 90;
+
+            if (gotAllBells)
             {
-                pauseMenuManager.ShowWinMenu();
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Outro100Percent");
             }
+            else
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Outro");
+            }
+
+            return;
         }
 
         hasBeenPressed = true;

@@ -7,6 +7,7 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField] private GameObject losePanel;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private string mainMenuSceneName = "MainMenu";
+    [SerializeField] private string startingSceneName = "HubWorld";
 
     private bool isPaused = false;
     private bool gameOver = false;
@@ -100,5 +101,21 @@ public class PauseMenuManager : MonoBehaviour
         LevelGoalRunning.ResetLevelGoals();
         BreakableWall.ResetBreakableWalls();
         SequencePuzzleManager.ResetSequencePuzzles();
+    }
+
+    public void RestartGameFromWinScreen()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(startingSceneName);
+        Coin.ResetCollectedBells();
+        CoinManager.ResetScore();
+        GrabbableObject.ResetDeliveredItems();
+        LevelGoalManager.ResetGoals();
+        PunchButton.ResetButtons();
+        BridgeTransition.ResetBridges();
+        LevelGoalRunning.ResetLevelGoals();
+        BreakableWall.ResetBreakableWalls();
+        SequencePuzzleManager.ResetSequencePuzzles();
+        
     }
 }

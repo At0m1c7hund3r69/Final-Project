@@ -20,9 +20,7 @@ public class MonkeyAnimationControl : MonoBehaviour
 
     private bool canPlaySound;
 
-    bool controllerInput;
-
-    bool controllerJumping;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,9 +35,7 @@ public class MonkeyAnimationControl : MonoBehaviour
 
         canPlaySound = true;
 
-        controllerInput = false;
-
-        controllerJumping = false;
+        
     }
 
     // Update is called once per frame
@@ -52,7 +48,7 @@ public class MonkeyAnimationControl : MonoBehaviour
     private void KeyCommands()
     {
 
-        if (Keyboard.current.wKey.isPressed || Keyboard.current.sKey.isPressed || Keyboard.current.aKey.isPressed || Keyboard.current.dKey.isPressed  || controllerInput == true)
+        if (Keyboard.current.wKey.isPressed || Keyboard.current.sKey.isPressed || Keyboard.current.aKey.isPressed || Keyboard.current.dKey.isPressed)
         {
             isWalking = true;
         }
@@ -61,7 +57,7 @@ public class MonkeyAnimationControl : MonoBehaviour
             isWalking = false;
         }
         
-        if (Keyboard.current.spaceKey.isPressed && isJumping == false || controllerJumping && isJumping == false)
+        if (Keyboard.current.spaceKey.isPressed && isJumping == false)
         {
             
             myAnim.SetTrigger("isJumping");
@@ -150,15 +146,7 @@ public class MonkeyAnimationControl : MonoBehaviour
     }
 
 
-    public void checkJump()
-    {
-        controllerJumping = true;
-    }
-
-    public void checkwalk()
-    {
-        controllerInput = true;
-    }
+    
 
 
 }
